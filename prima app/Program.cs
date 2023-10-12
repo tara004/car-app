@@ -5,7 +5,7 @@ Auto miaAuto;
 
 miaAuto = new Auto();
 
-miaAuto.stampa();
+miaAuto.StampaDescrizione();
 
 Console.ReadLine();
 
@@ -31,11 +31,25 @@ class Auto {
 		this.colore = "Rosso";
 	}
 
-	public void stampa(){
+	public void StampaDescrizione()
+	{
 		//stampo le caratteristiche dell'auto
-		Console.WriteLine("marca: " + this.marca); 
-		Console.WriteLine("modello: " + this.modello); 
-		Console.WriteLine("motore: " + this.tipoMotore); 
-		Console.WriteLine("colore: " + this.colore);
+		Console.WriteLine(GeneraDescrizione());
+	}
+
+	public string GeneraDescrizione()
+	{
+		//dichiarazione variabili
+		string result;
+
+		//costruisco il risultato concatenando le descrizioni
+		result = "marca: " + this.marca +"\n";
+		result += $"modello: {this.modello} \n";
+		result += $"motore: {this.tipoMotore} \n";
+		//result += ("motore: {0} \n", this.tipoMotore);
+		result += "colore: " + this.colore;
+
+		//restituisco il risultato
+		return result;
 	}
 }
