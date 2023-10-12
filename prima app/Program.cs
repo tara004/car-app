@@ -4,12 +4,12 @@ using System.Reflection.Metadata.Ecma335;
 
 prima_app.Auto miaAuto;
 
-miaAuto = new prima_app.Auto("Fiat", "Multipla", "Argento", prima_app.Auto.motore.benzina);
+miaAuto = new prima_app.Auto("Fiat", "Multipla", "Argento", prima_app.Auto.Motore.benzina);
 
 miaAuto.StampaDescrizione();
 miaAuto.StampaStato();
 
-miaAuto.accendi();
+miaAuto.Accendi();
 
 miaAuto.StampaStato();
 

@@ -8,14 +8,19 @@ namespace prima_app
 {
 	class Auto
 	{
-		//tipi personalizzati
+		#region " tipi "
 
-		public enum motore
+		//tipi personalizzati
+		public enum Motore
 		{
 			benzina,
 			diesel,
 			elettrico
 		}
+
+		#endregion
+
+		#region " proprietà "
 
 		//proprietà
 		public int livelloCarburante;
@@ -25,16 +30,20 @@ namespace prima_app
 		public string marca;
 		public string modello;
 		public string colore;
-		public motore tipoMotore;
+		public Motore tipoMotore;
 
 		private bool accesa;
+
+		#endregion
+
+		#region  metodi
 
 		//costruttore
 		public Auto()
 		{
 			this.marca = "Fiat";
 			this.modello = "Punto";
-			this.tipoMotore = motore.diesel;
+			this.tipoMotore = Motore.diesel;
 			this.colore = "Rosso";
 		}
 
@@ -45,7 +54,7 @@ namespace prima_app
 		/// <param name="modello">Modello del veicolo (es: Punto)</param>
 		/// <param name="colore">Colore del veicolo</param>
 		/// <param name="tipoMotore">Tipo di motore (a scelta fra quelli disponibili)</param>
-		public Auto(string marca, string modello, string colore, motore tipoMotore)
+		public Auto(string marca, string modello, string colore, Motore tipoMotore)
 		{
 			this.marca = marca;
 			this.modello = modello;
@@ -116,7 +125,7 @@ namespace prima_app
 		/// Tenta di avviare il veicolo <para>
 		/// Se non c'è carburante l'accensione fallisce</para>
 		/// </summary>
-		public void accendi()
+		public void Accendi()
 		{
 			//verifico il livello del carburante
 			if (this.livelloCarburante > 0)
@@ -134,10 +143,12 @@ namespace prima_app
 		/// <summary>
 		/// Spegne il veicolo
 		/// </summary>
-		public void spegni()
+		public void Spegni()
 		{
 			//spegne il veicolo
 			this.accesa = false;
 		}
+
+		#endregion
 	}
 }
