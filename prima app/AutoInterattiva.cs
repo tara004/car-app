@@ -9,8 +9,7 @@ namespace prima_app
 	internal class AutoInterattiva : prima_app.Auto
 	{
 
-		AutoInterattiva() {
-			this.livelloCarburante = 10;
+		public AutoInterattiva() {
 		}
 
 		/// <summary>
@@ -45,7 +44,7 @@ namespace prima_app
 						break;
 					case "3":
 						//rifornisco l'auto
-						//this.;
+						this.Rifornisci(10);
 						//stampo lo stato
 						this.StampaStato();
 

@@ -23,7 +23,8 @@ namespace prima_app
 		#region " proprietà "
 
 		//proprietà
-		protected int livelloCarburante;
+		private int livelloCarburante;
+		private int livelloMassimoCarburante;
 		/// <summary>
 		/// Marca del veicolo
 		/// </summary>
@@ -45,6 +46,7 @@ namespace prima_app
 			this.modello = "Punto";
 			this.tipoMotore = Motore.diesel;
 			this.colore = "Rosso";
+			this.livelloMassimoCarburante = 100;
 		}
 
 		/// <summary>
@@ -148,6 +150,21 @@ namespace prima_app
 		{
 			//spegne il veicolo
 			this.accesa = false;
+		}
+
+		/// <summary>
+		/// Aggiunge carburante all'auto
+		/// </summary>
+		/// <param name="carburante">Quantità di carburante da aggiungere</param>
+		public void Rifornisci(int carburante){
+			//se il valore è positivo, lo aggiungo
+			if (carburante > 0){
+				this.livelloCarburante += carburante;
+				//se il totale è superiore al valore massimo, torno al valore massimo
+				if (this.livelloCarburante > this.livelloMassimoCarburante){
+					this.livelloCarburante = this.livelloMassimoCarburante;
+				}
+			}
 		}
 
 		#endregion
