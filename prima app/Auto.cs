@@ -23,7 +23,7 @@ namespace prima_app
 		#region " proprietà "
 
 		//proprietà
-		public int livelloCarburante;
+		protected int livelloCarburante;
 		/// <summary>
 		/// Marca del veicolo
 		/// </summary>
@@ -61,66 +61,6 @@ namespace prima_app
 			this.colore = colore;
 			this.tipoMotore = tipoMotore;
 			this.livelloCarburante = 10;
-		}
-
-		/// <summary>
-		/// Gestisce il menu delle opzioni
-		/// </summary>
-		public void StampaMenu()
-		{
-			string Comando;
-
-			do
-			{
-				//stampo il menu
-				this.Menu();
-
-				//leggo l'input dell'utente
-				Comando = Console.ReadLine();
-
-				//chiamo il metodo scelto dall'utente
-				switch (Comando)
-				{
-					case "1":
-						//accendo l'auto
-						this.Accendi();
-						//stampo lo stato
-						this.StampaStato();
-						break;
-					case "2":
-						//spengo l'auto
-						this.Spegni();
-						//stampo lo stato
-						this.StampaStato();
-						break;
-					case "3":
-						//rifornisco l'auto
-						//this.;
-						//stampo lo stato
-						this.StampaStato();
-
-						break;
-					case "0":
-						//esco
-						break;
-					default:
-						//continuo il ciclo
-						break;
-				}
-				//se l'utente ha inserito "0", esco
-			} while (Comando != "0");
-		}
-
-		/// <summary>
-		/// Stampa il menu
-		/// </summary>
-		private void Menu(){
-			Console.WriteLine("Seleziona un comando");
-			Console.WriteLine("1) Accendi");
-			Console.WriteLine("2) Spegni");
-			Console.WriteLine("3) Rifornisci");
-			Console.WriteLine("0) Esci");
-
 		}
 
 		/// <summary>
