@@ -6,12 +6,7 @@ prima_app.Auto miaAuto;
 
 miaAuto = new prima_app.Auto("Fiat", "Multipla", "Argento", prima_app.Auto.Motore.benzina);
 
-miaAuto.StampaDescrizione();
-miaAuto.StampaStato();
-
-miaAuto.Accendi();
-
-miaAuto.StampaStato();
+miaAuto.StampaMenu();
 
 Console.ReadLine();
 
