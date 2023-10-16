@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace prima_app
 {
-	class Auto
+	public class Auto
 	{
 		#region " tipi "
 
