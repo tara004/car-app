@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace prima_app
@@ -42,11 +43,7 @@ namespace prima_app
 		//costruttore
 		public Auto()
 		{
-			this.marca = "Fiat";
-			this.modello = "Punto";
-			this.tipoMotore = Motore.diesel;
-			this.colore = "Rosso";
-			this.livelloMassimoCarburante = 100;
+			this.Init("Fiat", "Punto", "Rosso", Motore.benzina, 10);
 		}
 
 		/// <summary>
@@ -58,11 +55,38 @@ namespace prima_app
 		/// <param name="tipoMotore">Tipo di motore (a scelta fra quelli disponibili)</param>
 		public Auto(string marca, string modello, string colore, Motore tipoMotore)
 		{
+			this.Init(marca, modello, colore, tipoMotore, 10);
+		}
+
+		/// <summary>
+		/// Inizializza l'oggetto
+		/// </summary>
+		/// <param name="marca">Marca del veicolo (es: Fiat)</param>
+		/// <param name="modello">Modello del veicolo (es: Punto)</param>
+		/// <param name="colore">Colore del veicolo</param>
+		/// <param name="tipoMotore">Tipo di motore (a scelta fra quelli disponibili)</param>
+		/// <param name="carburante">Quantità di carburante presente nel serbatoio</param>
+		public Auto(string marca, string modello, string colore, Motore tipoMotore, int carburante)
+		{
+			this.Init(marca, modello, colore, tipoMotore, carburante);
+		}
+		
+		/// <summary>
+		/// Inizializza l'oggetto
+		/// </summary>
+		/// <param name="marca">Marca del veicolo (es: Fiat)</param>
+		/// <param name="modello">Modello del veicolo (es: Punto)</param>
+		/// <param name="colore">Colore del veicolo</param>
+		/// <param name="tipoMotore">Tipo di motore (a scelta fra quelli disponibili)</param>
+		/// <param name="carburante">Quantità di carburante presente nel serbatoio</param>
+		private void Init(string marca, string modello, string colore, Motore tipoMotore, int carburante)
+		{
 			this.marca = marca;
 			this.modello = modello;
 			this.colore = colore;
 			this.tipoMotore = tipoMotore;
-			this.livelloCarburante = 10;
+			this.livelloCarburante = carburante;
+			this.livelloMassimoCarburante = 100;
 		}
 
 		/// <summary>

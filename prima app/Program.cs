@@ -2,18 +2,18 @@
 using System.Diagnostics.SymbolStore;
 using System.Reflection.Metadata.Ecma335;
 
-prima_app.AutoInterattiva miaAuto;
+//prima_app.AutoInterattiva miaAuto;
 
-miaAuto = new prima_app.AutoInterattiva();
+//miaAuto = new prima_app.AutoInterattiva();
 
-miaAuto.StampaMenu();
+//miaAuto.StampaMenu();
 
 prima_app.Auto miaAuto2;
 
-//miaAuto2 = new prima_app.Auto();
+miaAuto2 = new prima_app.Auto();
 
-//miaAuto2.Accendi();
-//miaAuto2.StampaStato();
+miaAuto2.Accendi();
+miaAuto2.StampaStato();
 
 Console.ReadLine();
 
