@@ -76,7 +76,37 @@ namespace TestAuto
 				//car is turned on and has accelerated: ok
 			} else {
 				//car has not accelerated: error
-				throw new Exception("Car haven't accelerate");
+				throw new Exception("Car didn't accelerate");
+			}
+		}
+
+		/// <summary>
+		/// Tests Auto.Decelerate
+		/// </summary>
+		[TestMethod]
+		public void TestDecelerate()
+		{
+			//declare and initialize object
+			app_auto.Auto myCar;
+
+			myCar = new app_auto.Auto("", "", "", app_auto.Auto.Motore.benzina, 10);
+
+			//test accelerate when car is turned off
+			if (myCar.Decelerate(10)){
+				//car is turned off and has accelerated: error
+				throw new Exception("Can't Decelerate car");
+			}
+
+			//call object method
+			myCar.Accendi();
+
+			//test accelerate when car is turned on
+			if (myCar.Decelerate(10))
+			{
+				//car is turned on and has accelerated: ok
+			} else {
+				//car has not accelerated: error
+				throw new Exception("Car didn't Decelerate");
 			}
 		}
 	}

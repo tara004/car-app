@@ -98,8 +98,35 @@ namespace app_auto
 		#region " metodi "
 
 		/// <summary>
+		/// Decelerate the vehicle
+		/// </summary>
+		/// <param name="value">Amount of speed to decrease</param>
+		/// <returns>True if operation succeded<para>False if operation fails</para></returns>
+		public bool Decelerate(int value)
+		{
+			bool result;
+
+			//if the car is on, accelerate
+			if (this.accesa){
+				//increment the car speed
+				//if the speed is over the maximum, limit the speed
+				this.speed = Math.Max(this.speed - value, 0);
+
+				result = true;
+			}
+			else {
+			//notify the caller that the method failed
+				result = false;
+			}
+
+			return result;
+		}
+
+		/// <summary>
 		/// Accelerate the vehicle
 		/// </summary>
+		/// <param name="value">Amount of speed to increase</param>
+		/// <returns>True if operation succeded<para>False if operation fails</para></returns>
 		public bool Accelerate(int value)
 		{
 			bool result;
