@@ -138,6 +138,8 @@ namespace app_auto
 				//if the speed is over the maximum, limit the speed
 				this.speed = Math.Min(this.speed, this.maximumSpeed);
 
+				this.ReduceFuel(value);
+
 				result = true;
 			}
 			else {
@@ -248,6 +250,7 @@ namespace app_auto
 		{
 			//spegne il veicolo
 			this.accesa = false;
+			this.speed = 0;
 		}
 
 		/// <summary>
