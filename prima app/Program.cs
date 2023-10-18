@@ -8,9 +8,9 @@ using System.Reflection.Metadata.Ecma335;
 
 //miaAuto.StampaMenu();
 
-prima_app.Auto miaAuto2;
+app_auto.Auto miaAuto2;
 
-miaAuto2 = new prima_app.Auto();
+miaAuto2 = new app_auto.Auto();
 
 miaAuto2.Accendi();
 miaAuto2.StampaStato();

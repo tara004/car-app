@@ -11,9 +11,9 @@ namespace TestAuto
 		public void TestTurnOnBasic()
 		{
 			//declare and initialize object
-			prima_app.Auto myCar;
+			app_auto.Auto myCar;
 
-			myCar = new prima_app.Auto();
+			myCar = new app_auto.Auto();
 
 			//call object method
 			myCar.Accendi();
@@ -26,6 +26,7 @@ namespace TestAuto
 				throw new Exception("");
 			}
 		}
+
 		/// <summary>
 		/// Tests Auto.Accendi without fuel
 		/// </summary>
@@ -33,9 +34,9 @@ namespace TestAuto
 		public void TestTurnOnWithoutFuel()
 		{
 			//declare and initialize object
-			prima_app.Auto myCar;
+			app_auto.Auto myCar;
 
-			myCar = new prima_app.Auto("", "", "", prima_app.Auto.Motore.benzina, 0);
+			myCar = new app_auto.Auto("", "", "", app_auto.Auto.Motore.benzina, 0);
 
 			//call object method
 			myCar.Accendi();
@@ -46,6 +47,36 @@ namespace TestAuto
 			} else {
 				//error
 				throw new Exception("");
+			}
+		}
+
+		/// <summary>
+		/// Tests Auto.Accelerate
+		/// </summary>
+		[TestMethod]
+		public void TestAccelerate()
+		{
+			//declare and initialize object
+			app_auto.Auto myCar;
+
+			myCar = new app_auto.Auto("", "", "", app_auto.Auto.Motore.benzina, 10);
+
+			//test accelerate when car is turned off
+			if (myCar.Accelerate(10)){
+				//car is turned off and has accelerated: error
+				throw new Exception("Can't accelerate car");
+			}
+
+			//call object method
+			myCar.Accendi();
+
+			//test accelerate when car is turned on
+			if (myCar.Accelerate(10))
+			{
+				//car is turned on and has accelerated: ok
+			} else {
+				//car has not accelerated: error
+				throw new Exception("Car haven't accelerate");
 			}
 		}
 	}

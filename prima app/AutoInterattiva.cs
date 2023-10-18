@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prima_app
+namespace app_auto
 {
-	internal class AutoInterattiva : prima_app.Auto
+	internal class AutoInterattiva : app_auto.Auto
 	{
 
 		public AutoInterattiva() {

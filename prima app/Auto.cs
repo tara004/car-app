@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace prima_app
+namespace app_auto
 {
 	public class Auto
 	{
@@ -24,8 +24,10 @@ namespace prima_app
 		#region " proprietà "
 
 		//proprietà
-		private int livelloCarburante;
+		public int livelloCarburante { get; private set; }
 		private int livelloMassimoCarburante;
+		private int speed;
+		private int maximumSpeed;
 		/// <summary>
 		/// Marca del veicolo
 		/// </summary>
@@ -38,7 +40,7 @@ namespace prima_app
 
 		#endregion
 
-		#region  " metodi "
+		#region  " costruttori "
 
 		//costruttore
 		public Auto()
@@ -87,6 +89,36 @@ namespace prima_app
 			this.tipoMotore = tipoMotore;
 			this.livelloCarburante = carburante;
 			this.livelloMassimoCarburante = 100;
+			this.speed = 0;
+			this.maximumSpeed = 300;
+		}
+
+		#endregion
+
+		#region " metodi "
+
+		/// <summary>
+		/// Accelerate the vehicle
+		/// </summary>
+		public bool Accelerate(int value)
+		{
+			bool result;
+
+			//if the car is on, accelerate
+			if (this.accesa){
+				//increment the car speed
+				this.speed += value;
+				//if the speed is over the maximum, limit the speed
+				this.speed = Math.Min(this.speed, this.maximumSpeed);
+
+				result = true;
+			}
+			else {
+			//notify the caller that the method failed
+				result = false;
+			}
+
+			return result;
 		}
 
 		/// <summary>
@@ -184,10 +216,8 @@ namespace prima_app
 			//se il valore è positivo, lo aggiungo
 			if (carburante > 0){
 				this.livelloCarburante += carburante;
-				//se il totale è superiore al valore massimo, torno al valore massimo
-				if (this.livelloCarburante > this.livelloMassimoCarburante){
-					this.livelloCarburante = this.livelloMassimoCarburante;
-				}
+				this.livelloCarburante = Math.Min(this.livelloMassimoCarburante
+				, this.livelloCarburante);
 			}
 		}
 
