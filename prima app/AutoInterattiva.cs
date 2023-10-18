@@ -32,13 +32,13 @@ namespace app_auto
 				{
 					case "1":
 						//accendo l'auto
-						this.Accendi();
+						this.TurnOn();
 						//stampo lo stato
 						this.StampaStato();
 						break;
 					case "2":
 						//spengo l'auto
-						this.Spegni();
+						this.TurnOff();
 						//stampo lo stato
 						this.StampaStato();
 						break;

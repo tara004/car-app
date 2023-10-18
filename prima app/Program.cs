@@ -12,7 +12,7 @@ app_auto.Auto miaAuto2;
 
 miaAuto2 = new app_auto.Auto();
 
-miaAuto2.Accendi();
+miaAuto2.TurnOn();
 miaAuto2.StampaStato();
 
 Console.ReadLine();

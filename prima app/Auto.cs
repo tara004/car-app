@@ -26,7 +26,7 @@ namespace app_auto
 		//proprietà
 		public int livelloCarburante { get; private set; }
 		private int livelloMassimoCarburante;
-		private int speed;
+		public int speed { get; private set;}
 		private int maximumSpeed;
 		/// <summary>
 		/// Marca del veicolo
@@ -36,7 +36,7 @@ namespace app_auto
 		public string colore;
 		public Motore tipoMotore;
 
-		private bool accesa;
+		public bool accesa { get; private set;}
 
 		#endregion
 
@@ -208,16 +208,17 @@ namespace app_auto
 		}
 
 		/// <summary>
-		/// Tenta di avviare il veicolo <para>
-		/// Se non c'è carburante l'accensione fallisce</para>
+		/// Attempt to start the vehicle <para>
+		/// If there is no fuel, the ignition fails</para>
 		/// </summary>
-		public void Accendi()
+		public void TurnOn()
 		{
-			//verifico il livello del carburante
+			//check fuel level
 			if (this.livelloCarburante > 0)
 			{
 				//se è maggiore di zero accendo il veicolo
 				this.accesa = true;
+				ReduceFuel(1);
 			}
 			else
 			{
@@ -227,9 +228,23 @@ namespace app_auto
 		}
 
 		/// <summary>
+		/// Reduce che fuel
+		/// </summary>
+		/// <param name="value">Amount of fuel to reduce</param>
+		private void ReduceFuel(int value)
+		{
+			//reduce fuel level
+			this.livelloCarburante = Math.Max(this.livelloCarburante - value, 0);
+			//if the fuel reaches 0, turn off the car
+			if (this.livelloCarburante <= 0) {
+				this.TurnOff();
+			}
+		}
+
+		/// <summary>
 		/// Spegne il veicolo
 		/// </summary>
-		public void Spegni()
+		public void TurnOff()
 		{
 			//spegne il veicolo
 			this.accesa = false;

@@ -16,10 +16,10 @@ namespace TestAuto
 			myCar = new app_auto.Auto();
 
 			//call object method
-			myCar.Accendi();
+			myCar.TurnOn();
 
 			//check object state: it has to be off
-			if (myCar.GeneraStato() == "carburante: 10 \naccesa\n"){
+			if (myCar.accesa){
 				//ok
 			} else {
 				//error
@@ -39,7 +39,7 @@ namespace TestAuto
 			myCar = new app_auto.Auto("", "", "", app_auto.Auto.Motore.benzina, 0);
 
 			//call object method
-			myCar.Accendi();
+			myCar.TurnOn();
 
 			//check object state: it has to be off
 			if (myCar.GeneraStato() == "carburante: 0 \nspenta\n"){
@@ -68,7 +68,7 @@ namespace TestAuto
 			}
 
 			//call object method
-			myCar.Accendi();
+			myCar.TurnOn();
 
 			//test accelerate when car is turned on
 			if (myCar.Accelerate(10))
@@ -98,7 +98,7 @@ namespace TestAuto
 			}
 
 			//call object method
-			myCar.Accendi();
+			myCar.TurnOn();
 
 			//test accelerate when car is turned on
 			if (myCar.Decelerate(10))
