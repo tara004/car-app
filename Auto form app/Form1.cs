@@ -19,7 +19,10 @@ namespace Auto_form_app
         {
             TurnOnAuto();
         }
-
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            TurnOffAuto();
+        }
         private void btnAccelerate_Click(object sender, EventArgs e)
         {
             this.Accelerate(10);
@@ -66,6 +69,27 @@ namespace Auto_form_app
             this.lblAutoStatus.Text = status;
         }
 
+        private void TurnOffAuto()
+        {
+            string status;
+
+            Auto.TurnOff();
+
+            //decode the status to create a string
+            if (this.Auto.accesa)
+            {
+                status = "accesa";
+            }
+            else
+            {
+                status = "spenta";
+            }
+
+            //outputs the status
+            this.lblAutoStatus.Text = status;
+        }
+
+
         /// <summary>
         /// Accelerate the car
         /// </summary>
@@ -78,9 +102,6 @@ namespace Auto_form_app
 
         #endregion
 
-        private void btnStop_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
