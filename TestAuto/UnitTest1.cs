@@ -108,6 +108,15 @@ namespace TestAuto
 				//car has not accelerated: error
 				throw new Exception("Car didn't Decelerate");
 			}
+			
+		}
+		[TestMethod]
+		public void TestAcce2()
+		{
+			
+
+
+
 		}
 	}
 }
