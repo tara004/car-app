@@ -26,7 +26,11 @@ namespace Auto_form_app
         }
         private void btnAccelerate_Click(object sender, EventArgs e)
         {
-            this.Accelerate(10);
+            this.Accelera(10);
+        }
+        private void btnDeccelerate_Click(object sender, EventArgs e)
+        {
+            this.decellera(10);
         }
         private void btnFuel_Click(object sender, EventArgs e)
         {
@@ -48,7 +52,7 @@ namespace Auto_form_app
         private void OnLoad(object sender, EventArgs e)
         {
             this.Auto = new app_auto.Auto();
-            this.Auto.Refill(10);
+            this.Auto.Refill(1);
             this.lblAutoStatus.Text = this.Auto.marca;
             this.pbaSpeed.Minimum = 0;
             this.pbaSpeed.Maximum = this.Auto.maximumSpeed;
@@ -103,7 +107,7 @@ namespace Auto_form_app
         /// Accelerate the car
         /// </summary>
         /// <param name="value">Amount of speed to increase</param>
-        private void Accelerate(int value)
+        private void Accelera(int value)
         {
             this.Auto.Accelerate(value);
             this.pbaSpeed.Value = this.Auto.speed;
@@ -118,14 +122,23 @@ namespace Auto_form_app
             this.Auto.Refill(10);
             this.pbaFuel.Value = this.Auto.livelloCarburante;
         }
-        private void btnDeccelerate_Click(object sender, EventArgs e)
-        {
-            decellera(10);
-        }
 
         #endregion
 
         private void pbaFuel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+
+        {
+            this.decellera(5);
+            timer1.Interval = 1000; // Imposta l'intervallo a 1 secondo
+            timer1.Enabled = true;  // Avvia il timer
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

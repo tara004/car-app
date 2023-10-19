@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblAutoStatus = new Label();
             btnStart = new Button();
             btnAccelerate = new Button();
@@ -37,6 +38,7 @@
             pbaFuel = new ProgressBar();
             btnExit = new Button();
             btnDeccelerate = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // lblAutoStatus
@@ -131,6 +133,10 @@
             btnDeccelerate.UseVisualStyleBackColor = true;
             btnDeccelerate.Click += btnDeccelerate_Click;
             // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -148,6 +154,7 @@
             Margin = new Padding(2);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -163,5 +170,6 @@
         private ProgressBar pbaFuel;
         private Button btnExit;
         private Button btnDeccelerate;
+        private System.Windows.Forms.Timer timer1;
     }
 }
