@@ -108,6 +108,11 @@ namespace Auto_form_app
             this.Auto.Accelerate(value);
             this.pbaSpeed.Value = this.Auto.speed;
         }
+        private void decellera(int value)
+        {
+            this.Auto.Decelerate(value);
+            this.pbaSpeed.Value = this.Auto.speed;
+        }
         public void Fuel()
         {
             this.Auto.Refill(10);
@@ -123,5 +128,11 @@ namespace Auto_form_app
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            decellera(10);
+        }
     }
 }
+#endregion

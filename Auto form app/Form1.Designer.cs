@@ -127,8 +127,9 @@
             button1.Name = "button1";
             button1.Size = new Size(94, 54);
             button1.TabIndex = 8;
-            button1.Text = "decelleras";
+            button1.Text = "Decellera";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
