@@ -28,24 +28,36 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
+			this.lblAutoStatus = new System.Windows.Forms.Label();
+			this.btnStart = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lblAutoStatus
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(212, 48);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(78, 32);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "label1";
+			this.lblAutoStatus.AutoSize = true;
+			this.lblAutoStatus.Location = new System.Drawing.Point(46, 185);
+			this.lblAutoStatus.Name = "lblAutoStatus";
+			this.lblAutoStatus.Size = new System.Drawing.Size(78, 32);
+			this.lblAutoStatus.TabIndex = 0;
+			this.lblAutoStatus.Text = "label1";
+			// 
+			// btnStart
+			// 
+			this.btnStart.Location = new System.Drawing.Point(281, 48);
+			this.btnStart.Name = "btnStart";
+			this.btnStart.Size = new System.Drawing.Size(157, 86);
+			this.btnStart.TabIndex = 1;
+			this.btnStart.Text = "Start";
+			this.btnStart.UseVisualStyleBackColor = true;
+			this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.btnStart);
+			this.Controls.Add(this.lblAutoStatus);
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
@@ -55,6 +67,7 @@
 
 		#endregion
 
-		private Label label1;
+		private Label lblAutoStatus;
+		private Button btnStart;
 	}
 }
