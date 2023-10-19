@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "prima app", "prima app\prima app.csproj", "{2D5E0F66-9370-4047-9E1B-484E22B40041}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAuto", "TestAuto\TestAuto.csproj", "{ED53F76A-916F-48A0-A006-9420516991CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAuto", "TestAuto\TestAuto.csproj", "{ED53F76A-916F-48A0-A006-9420516991CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auto form app", "Auto form app\Auto form app.csproj", "{875D57C5-2678-45AB-A17F-93B61BFD5894}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{ED53F76A-916F-48A0-A006-9420516991CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED53F76A-916F-48A0-A006-9420516991CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED53F76A-916F-48A0-A006-9420516991CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{875D57C5-2678-45AB-A17F-93B61BFD5894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875D57C5-2678-45AB-A17F-93B61BFD5894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875D57C5-2678-45AB-A17F-93B61BFD5894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875D57C5-2678-45AB-A17F-93B61BFD5894}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
