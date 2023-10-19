@@ -1,10 +1,16 @@
+using System.ComponentModel;
+using Timer = System.Windows.Forms.Timer;
+
 namespace Auto_form_app
 {
     public partial class Form1 : Form
     {
 
         private app_auto.Auto Auto;
-
+        Timer Timer1= new Timer();
+      
+        
+        
         public Form1()
         {
             InitializeComponent();
@@ -130,18 +136,45 @@ namespace Auto_form_app
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-
-        {
-            this.decellera(5);
-            timer1.Interval = 1000; // Imposta l'intervallo a 1 secondo
-            timer1.Enabled = true;  // Avvia il timer
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            Timer1.Interval = 1000;
+            Timer1.Tick += new EventHandler(Timer1_Tick);
+            Timer1.Start();
 
         }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            this.decellera(1);
+            
+
+        }
+        protected override void OnClosing(CancelEventArgs e)       
+        {
+
+            base.OnClosing(e);
+            if(MessageBox.Show("confermi la chiusura","Attenzione",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Exclamation,MessageBoxDefaultButton.Button1)==DialogResult.Yes )
+            {
+
+                 
+            }
+            else
+            {
+
+                e.Cancel = true; 
+
+
+            }
+            
+
+       
+        
+        }
+
+
+
+
     }
 }
 #endregion

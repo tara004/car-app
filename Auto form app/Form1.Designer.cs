@@ -38,7 +38,7 @@
             pbaFuel = new ProgressBar();
             btnExit = new Button();
             btnDeccelerate = new Button();
-            timer1 = new System.Windows.Forms.Timer(components);
+            Timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // lblAutoStatus
@@ -135,7 +135,7 @@
             // 
             // timer1
             // 
-            timer1.Tick += timer1_Tick;
+            Timer1.Tick += Timer1_Tick;
             // 
             // Form1
             // 
@@ -170,6 +170,6 @@
         private ProgressBar pbaFuel;
         private Button btnExit;
         private Button btnDeccelerate;
-        private System.Windows.Forms.Timer timer1;
+        
     }
 }
