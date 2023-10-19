@@ -45,7 +45,7 @@ namespace app_auto
 					case "3":
 						//chiedo all'utente quanto carburante vuole aggiungere
 						//rifornisco l'auto
-						this.Rifornisci(this.ChiediCarburante());
+						this.Refill(this.ChiediCarburante());
 						//stampo lo stato
 						this.StampaStato();
 

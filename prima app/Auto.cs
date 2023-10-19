@@ -27,7 +27,7 @@ namespace app_auto
 		public int livelloCarburante { get; private set; }
 		private int livelloMassimoCarburante;
 		public int speed { get; private set;}
-		private int maximumSpeed;
+		public int maximumSpeed { get; private set; }
 		/// <summary>
 		/// Marca del veicolo
 		/// </summary>
@@ -257,7 +257,7 @@ namespace app_auto
 		/// Aggiunge carburante all'auto
 		/// </summary>
 		/// <param name="carburante">Quantità di carburante da aggiungere</param>
-		public void Rifornisci(int carburante){
+		public void Refill(int carburante){
 			//se il valore è positivo, lo aggiungo
 			if (carburante > 0){
 				this.livelloCarburante += carburante;
