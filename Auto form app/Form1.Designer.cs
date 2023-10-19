@@ -36,6 +36,7 @@
             btnFuel = new Button();
             pbaFuel = new ProgressBar();
             btnExit = new Button();
+            btnDeccelerate = new Button();
             SuspendLayout();
             // 
             // lblAutoStatus
@@ -91,7 +92,7 @@
             // 
             // btnFuel
             // 
-            btnFuel.Location = new Point(475, 30);
+            btnFuel.Location = new Point(432, 30);
             btnFuel.Margin = new Padding(2);
             btnFuel.Name = "btnFuel";
             btnFuel.Size = new Size(97, 54);
@@ -119,11 +120,23 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
+            // btnDeccelerate
+            // 
+            btnDeccelerate.Location = new Point(331, 30);
+            btnDeccelerate.Margin = new Padding(2);
+            btnDeccelerate.Name = "btnDeccelerate";
+            btnDeccelerate.Size = new Size(97, 54);
+            btnDeccelerate.TabIndex = 8;
+            btnDeccelerate.Text = "Deccelerate";
+            btnDeccelerate.UseVisualStyleBackColor = true;
+            btnDeccelerate.Click += btnDeccelerate_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(685, 381);
+            Controls.Add(btnDeccelerate);
             Controls.Add(btnExit);
             Controls.Add(pbaFuel);
             Controls.Add(btnFuel);
@@ -149,5 +162,6 @@
         private Button btnFuel;
         private ProgressBar pbaFuel;
         private Button btnExit;
+        private Button btnDeccelerate;
     }
 }

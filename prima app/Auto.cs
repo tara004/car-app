@@ -90,7 +90,7 @@ namespace app_auto
 			this.livelloCarburante = carburante;
 			this.livelloMassimoCarburante = 100;
 			this.speed = 0;
-			this.maximumSpeed = 300;
+			this.maximumSpeed = 500;
 		}
 
 		#endregion
