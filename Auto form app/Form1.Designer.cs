@@ -97,7 +97,7 @@
             btnFuel.Name = "btnFuel";
             btnFuel.Size = new Size(97, 54);
             btnFuel.TabIndex = 5;
-            btnFuel.Text = "Fuel";
+            btnFuel.Text = "E-Fuel";
             btnFuel.UseVisualStyleBackColor = true;
             btnFuel.Click += btnFuel_Click;
             // 
@@ -130,7 +130,6 @@
             btnDeccelerate.Text = "Deccelerate";
             btnDeccelerate.UseVisualStyleBackColor = true;
             btnDeccelerate.Click += btnDeccelerate_Click;
-            button1.Click += button1_Click;
             // 
             // Form1
             // 
