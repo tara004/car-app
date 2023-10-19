@@ -130,6 +130,7 @@
             btnDeccelerate.Text = "Deccelerate";
             btnDeccelerate.UseVisualStyleBackColor = true;
             btnDeccelerate.Click += btnDeccelerate_Click;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
