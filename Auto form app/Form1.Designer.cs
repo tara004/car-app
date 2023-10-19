@@ -36,6 +36,7 @@
             btnFuel = new Button();
             pbaFuel = new ProgressBar();
             btnExit = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lblAutoStatus
@@ -119,11 +120,21 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(346, 30);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 54);
+            button1.TabIndex = 8;
+            button1.Text = "decelleras";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(685, 381);
+            Controls.Add(button1);
             Controls.Add(btnExit);
             Controls.Add(pbaFuel);
             Controls.Add(btnFuel);
@@ -149,5 +160,6 @@
         private Button btnFuel;
         private ProgressBar pbaFuel;
         private Button btnExit;
+        private Button button1;
     }
 }
