@@ -12,6 +12,7 @@ namespace Auto_form_app
             this.Load += this.OnLoad;
         }
 
+        #region Event management
 
         #region Event management
 
