@@ -36,7 +36,7 @@
             btnFuel = new Button();
             pbaFuel = new ProgressBar();
             btnExit = new Button();
-            button1 = new Button();
+            btnDeccelerate = new Button();
             SuspendLayout();
             // 
             // lblAutoStatus
@@ -92,7 +92,7 @@
             // 
             // btnFuel
             // 
-            btnFuel.Location = new Point(475, 30);
+            btnFuel.Location = new Point(435, 30);
             btnFuel.Margin = new Padding(2);
             btnFuel.Name = "btnFuel";
             btnFuel.Size = new Size(97, 54);
@@ -121,21 +121,22 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
-            // button1
+            // btnDeccelerate
             // 
-            button1.Location = new Point(346, 30);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 54);
-            button1.TabIndex = 8;
-            button1.Text = "decelleras";
-            button1.UseVisualStyleBackColor = true;
+            btnDeccelerate.Location = new Point(332, 30);
+            btnDeccelerate.Name = "btnDeccelerate";
+            btnDeccelerate.Size = new Size(98, 54);
+            btnDeccelerate.TabIndex = 8;
+            btnDeccelerate.Text = "Deccelerate";
+            btnDeccelerate.UseVisualStyleBackColor = true;
+            btnDeccelerate.Click += btnDeccelerate_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(685, 381);
-            Controls.Add(button1);
+            Controls.Add(btnDeccelerate);
             Controls.Add(btnExit);
             Controls.Add(pbaFuel);
             Controls.Add(btnFuel);
@@ -161,6 +162,6 @@
         private Button btnFuel;
         private ProgressBar pbaFuel;
         private Button btnExit;
-        private Button button1;
+        private Button btnDeccelerate;
     }
 }

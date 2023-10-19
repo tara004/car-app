@@ -113,7 +113,11 @@ namespace Auto_form_app
             this.Auto.Refill(10);
             this.pbaFuel.Value = this.Auto.livelloCarburante;
         }
-        //
+        private void btnDeccelerate_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
 
